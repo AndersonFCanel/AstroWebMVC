@@ -1,0 +1,31 @@
+
+a) Implemente um projeto web chamado AstroWeb, esse projeto deverá ter o arquivo web.xml
+b) Implemente um html chamado astro.html. Esse html deverá ter um formulário com os seguintes
+campos: nome, idade e o botão enviar.
+c) Implemente um css (pode utilizar materialize, bootstrap, foundation, ou outro framework css qualquer) e
+um javascript para esse html. O javascript não permitirá enviar as informações do formulário caso: o
+campo nome esteja vazio ou o campo idade esteja vazio, uma mensagem alerta deverá ser informada
+solicitando o preenchimento dos campos (pode utilizar modal do bootstrap ou outro framework).
+
+
+d) Implemente um servlet que recebe as informações enviadas pelo formulário e calcula a idade da
+pessoa na forma de meses, anos, dias, minutos e segundos. Por exemplo, se a pessoa tem 1 ano, então
+ela tem 12 meses de vida ou 365 dias de vida e assim por diante. Após realizado os cálculos, os valores
+deverão ser enviados para resultado.jsp em forma de atributos.
+e) Altere o html feito em (a) e inclua a possibilidade (checkbox) de o usuário descobrir qual é seu
+horóscopo chinês baseado em sua idade. Em resultado.jsp além de apresentar os dados solicitados em
+(d) será apresentado também a imagem e o nome que do símbolo do horóscopo do usuário.
+
+
+e) Modifique o servlet para o mesmo receber a requisição (voltar) do jsp e encaminhar o fluxo de
+execução para a primeira tela.
+f) Modifique o jsp para que o mesmo também utilize o mesmo css da página anterior, assim todas as
+páginas terão a mesma identidade visual.
+g) Altere as configurações do seu projeto (web.xml), de modo que astro.html seja a página inicial do
+sistema.
+
+
+
+Observação: Utilize validação de campos (javascript ou jquery ou regex ou outro), utilize CSS para melhorar o
+aspecto das páginas, também é permitido frameworks CSS (Bootstrap, Materialize, etc)
+

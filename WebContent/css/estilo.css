@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/**/
+
+body {
+    padding: 20px;
+}
+
+label {
+    display: block;
+}
+
+input.error {
+    border: 1px solid red;
+}
+
+label.error {
+    font-weight: normal;
+    color: red;
+}
+
+button {
+    display: block;
+    margin-top: 20px;
+}
