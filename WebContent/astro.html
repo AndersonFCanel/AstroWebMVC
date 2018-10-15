@@ -40,58 +40,64 @@
 <title>Astro Web</title>
 </head>
 <body>
-
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h1>Astro Web</h1>
+	<div class="p-3 mb-2 bg-danger text-orange">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h1>Astro Web</h1>
+			</div>
 		</div>
-	</div>
 
-	<div class="row content" id="conteudo">
-		<div class="col-md-3 "></div>
-		<div class="col-md-6 ">
-			<form id="form" data-toggle="validator" role="form" method="get"
-				action="AstroController">
-				<fieldset>
-					<legend>Preencha seu nome e sua idade: </legend>
+		<div class="row content" id="conteudo">
+			<div class="col-md-3 "></div>
+			<div class="col-md-6 ">
+				<form id="form" data-toggle="validator" role="form" method="get"
+					action="AstroController">
+					<fieldset>
+						<legend>Preencha seu nome e sua idade: </legend>
 
-					<div class="form-group">
-						<label for="nome" class="control-label">Nome: </label> <input
-							id="nome" class="form-control"
-							placeholder="Digite a nome aqui..." type="text" name="nome">
-					</div>
-
-					<div class="form-group">
-						<label for="idade" class="control-label">Idade: </label> <input
-							type="text" class="form-control" id="idade" name="idade"
-							placeholder="Digite sua idade aqui ...">
-					</div>
-
-					<button type="submit" class="btn btn-primary">Enviar</button>
-				</fieldset>
-				</br>
-				<fieldset>
-					<legend>Gostaria de saber seu horoscopo chinês baseado em
-						sua idade?</legend>
-					<div class="horos">
-						<div>
-							<input type="checkbox" id="sim" id="verHoroscopo"
-								name="verHoroscopo" value="sim" /> <label for="sim">SIM</label>
+						<div class="form-group">
+							<label for="nome" class="control-label">Nome: </label> <input
+								id="nome" class="form-control"
+								placeholder="Digite a nome aqui..." type="text" name="nome">
 						</div>
-						<div>
-							<input type="checkbox" id="nao" name="verHoroscopo"
-								id="verHoroscopo" value="nao" /> <label for="nao">NÃO</label>
+
+						<div class="form-group">
+							<label for="idade" class="control-label">Idade: </label> <input
+								type="text" class="form-control" id="idade" name="idade"
+								placeholder="Digite sua idade aqui ...">
 						</div>
-					</div>
-				</fieldset>
-			</form>
+					</fieldset>
+					</br>
+					<fieldset>
+						<legend>Gostaria de saber seu horoscopo chinês baseado em
+							sua idade?</legend>
+						<div class="row">
+							<div class="col-md-3 "></div>
+							<div class="btn-group-toggle" data-toggle="buttons">
+								<label class="btn btn-warning btn-lg"> <input
+									type="checkbox" id="sim" id="verHoroscopo" name="verHoroscopo"
+									value="sim" > SIM
+								</label>
+							</div>
+							<div class="col-md-2 "></div>
+							<div class="btn-group-toggle" data-toggle="buttons">
+								<label class="btn btn-warning btn-lg"> <input
+									type="checkbox" id="sim" id="verHoroscopo" name="verHoroscopo"
+									value="nao" > NÃO
+								</label>
+							</div>
+							<div class="col-md-3 "></div>
+						</div>
+					</fieldset>
+					<button type="submit" class="btn btn-warning btn-lg">Enviar</button>
+				</form>
+			</div>
+			<div class="col-md-3 "></div>
 		</div>
-		<div class="col-md-3 "></div>
-	</div>
 
-	</form>
+		</form>
 	</div>
 	</div>
-
+	</div>
 </body>
 </html>
