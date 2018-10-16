@@ -16,7 +16,13 @@ $(document).ready(function() {
 		}
 
 		if (valor >= 130 || valor <= 0) {
-			alert("Idade com valor inválido!");
+			if(valor>=130){
+				$('#idade').val("");
+				alert("Idade com valor inválido.\nFala sério!\n Você não tem "+valor+" anos!");
+			}else if(valor <=0){
+				alert("Idade com valor inválido.\n Fala sério!\n Você não tem menos de 0 anos!");
+			}
+			
 		}
 	});
 
