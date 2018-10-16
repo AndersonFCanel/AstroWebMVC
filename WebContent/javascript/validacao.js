@@ -1,6 +1,11 @@
 $(document).ready(function() {
 	console.log('Ready disparado');
 
+	
+	$('verHoroscopo')
+	
+	
+	
 	$('#idade').keyup(function() {
 		var valor = document.getElementById("idade").value;
 
@@ -35,21 +40,22 @@ $(document).ready(function() {
 			}
 		},
 		submitHandler : function(form) {
-			var checkado = pegaQuantidade();
+			/*var checkado = pegaQuantidade();
 
 			if (checkado) {
 				alert('Formulario validado');
 				return true;
 			} else {
 				return false;
-			}
+			}*/
+			return true;
 		}
 	});
 });
 
 
 
-function contaCheckbox(selecionados) {
+/*function contaCheckbox(selecionados) {
 	var inputs, x, selecionados = 0;
 	inputs = document.getElementsByTagName('input');
 	for (x = 0; x < inputs.length; x++) {
@@ -78,3 +84,4 @@ function pegaQuantidade() {
 		return false;
 	}
 }
+*/

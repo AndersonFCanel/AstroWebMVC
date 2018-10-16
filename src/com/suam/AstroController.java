@@ -1,4 +1,4 @@
- package com.suam;
+package com.suam;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -26,21 +26,30 @@ public class AstroController extends HttpServlet {
 
 		String nome = request.getParameter("nome");
 		String idad = request.getParameter("idade");
-		String verHoroscopo = request.getParameter("verHoroscopo");
+		String verHoroscopo;
 
 		int idade = Integer.parseInt(idad);
-		 
+
 		PessoaBean pessoa = new PessoaBean();
-		
+
 		pessoa.setNome(nome);
 		pessoa.setIdade(idade);
-		
+
 		boolean verHoro;
-		if (verHoroscopo.equals("sim")) {
-			verHoro = true;
+		try {
+			verHoroscopo = request.getParameter("verHoroscopo");
 			request.setAttribute("signo", pessoa.converte(idade));
-		} else {
+			if (verHoroscopo.equals("sim")) {
+				verHoro = true;
+				System.out.println("Visualizar ");
+			} else {
+				verHoro = false;
+			}
+
+		} catch (Exception e) {
 			verHoro = false;
+			System.out.println("Não Visualizar ");
+			e.printStackTrace();
 		}
 
 		request.setAttribute("nome", pessoa.getNome());
@@ -50,19 +59,19 @@ public class AstroController extends HttpServlet {
 		request.setAttribute("anos", pessoa.calculaAnos());
 		request.setAttribute("minutos", pessoa.calculaMinutos());
 		request.setAttribute("segundos", pessoa.calculaSegundos());
-		request.setAttribute("verSigno", Boolean.toString(verHoro)); 
-		
-		System.out.println(pessoa.nome+"\nDias - "+pessoa.calculaDias()+"\nMeses - "
-				+ "" + pessoa.calculaMeses()+"\nAnos - "+pessoa.calculaAnos()+"\n Minutos - "
-						+ ""+pessoa.calculaMinutos()+" Segundos - "+pessoa.calculaSegundos());
-		
-		request.getRequestDispatcher("resultado.jsp").forward(request, response);	
-		
+		request.setAttribute("verSigno", Boolean.toString(verHoro));
+
+		System.out.println(pessoa.nome + "\nDias - " + pessoa.calculaDias() + "\nMeses - " + "" + pessoa.calculaMeses()
+				+ "\nAnos - " + pessoa.calculaAnos() + "\n Minutos - " + "" + pessoa.calculaMinutos() + " Segundos - "
+				+ pessoa.calculaSegundos());
+
+		request.getRequestDispatcher("resultado.jsp").forward(request, response);
+
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 	}
 
 }

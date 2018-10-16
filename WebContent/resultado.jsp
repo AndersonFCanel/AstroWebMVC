@@ -42,7 +42,8 @@
 <title>AstroWeb</title>
 </head>
 <body>
-	<div class="p-3 mb-2 bg-danger ">
+<div class="container-fluid">
+	<div class="corpo-Astro">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h1>Astro Web</h1>
@@ -52,7 +53,7 @@
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
-				<table class="table table-warning">
+				<table class="table">
 					<thead>
 						<tr>
 							<th scope="col">Nome</th>
@@ -87,9 +88,9 @@
 
 					if (ver.equals("true")) {
 						out.print(
-								"<table class='table table-warning'>\n<thead>\n<tr>\n<th scope='col'>Signo</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>");
+								"<table class='table'>\n<thead>\n<tr>\n<th scope='col'>Signo</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>");
 						out.print("<img src='" + request.getAttribute("signo")
-								+ "' alt='Imagem de página não encontrada' width='100%' height='80%' />");
+								+ "' alt='Imagem de página não encontrada' width='100%' height='70%' />");
 						out.print("</td>\n</tr>\n</tbody>\n</table>");
 					}
 				%>
@@ -105,6 +106,7 @@
 				</form>
 			</div>
 		</div>
+	</div>
 	</div>
 </body>
 </html>

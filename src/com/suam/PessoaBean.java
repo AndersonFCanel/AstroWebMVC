@@ -10,8 +10,8 @@ public class PessoaBean {
 	float dia;
 	int meses;
 	int ano;
-	double minuto;
-	double segundo;
+	long minuto;
+	long segundo;
 	
 	public String getNome() {
 		return nome;
@@ -44,13 +44,13 @@ public class PessoaBean {
 		return ano;
 	}
 
-	public double calculaMinutos() {
-		minuto = getIdade() * 365.25f * 60 * 24; 
+	public long calculaMinutos() {
+		minuto = (long) (getIdade() * 365.25 * 60 * 24); 
 		return minuto;
 	}
 
-	public double calculaSegundos() {
-		segundo = getIdade() * 365.25f * 60 * 60 * 24; 
+	public long calculaSegundos() {
+		segundo = (long) (getIdade() * 365.25 * 60 * 60 * 24); 
 		return segundo;
 	}
 
