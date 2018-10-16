@@ -101,8 +101,8 @@
 			<div class="col-md-11"></div>
 			<div class="col-md-1">
 				<form id="form" data-toggle="validator" role="form" method="post"
-					action="astro.html">
-					<button type="submit" class="btn btn-primary">Voltar</button>
+					action="AstroController">
+					<button type="submit" class="btn btn-warning btn-lg">Voltar</button>
 				</form>
 			</div>
 		</div>

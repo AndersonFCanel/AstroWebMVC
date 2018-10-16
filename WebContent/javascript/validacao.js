@@ -1,10 +1,10 @@
+$('input').on('click', function() {
+	    $('input[type="checkbox"]').parent().css('background', 'white');
+	    $('input[type="checkbox"]:checked').parent().css('background', 'gray');
+	  });
+
 $(document).ready(function() {
 	console.log('Ready disparado');
-
-	
-	$('verHoroscopo')
-	
-	
 	
 	$('#idade').keyup(function() {
 		var valor = document.getElementById("idade").value;

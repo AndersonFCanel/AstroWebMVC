@@ -1,21 +1,22 @@
 @charset "UTF-8";
 
 /**/
+div.corpo-Astro-home {
+	padding: 20px;
+	background-color: #8B0000;
+	color: #DAA520;
+	font-size: x-large;
+	background-image: url("../imagens/fundo.png");
+	background-repeat: no-repeat;
+	background-position: 50%, 70%;
+	background-size: 25%;
+}
+
 div.corpo-Astro {
 	padding: 20px;
 	background-color: #8B0000;
 	color: #DAA520;
 	font-size: x-large;
-	background-image:url("../imagens/fundo.png");
-	background-repeat: no-repeat;
-	background-position:50%, 70%;
-	background-size: 25%;
-	
-	}
-
-#cabecalho{
-	
-	/*background-clip: padding-box;*/
 }
 
 div.horoscopo {
@@ -35,11 +36,10 @@ div.AstroForm {
 	font-weight: bold;
 }
 
-table.table{
+table.table {
 	border-width: 10px;
 	border-style: double;
 	border-color: #DAA520;
-		
 }
 
 label {
@@ -47,12 +47,12 @@ label {
 }
 
 input.error {
-	border: 1px solid red;
+	border: 2px solid red;
 }
 
 label.error {
-	font-weight: normal;
-	color: red;
+	font-weight: bold;
+	color: scrollbar;
 }
 
 button {
