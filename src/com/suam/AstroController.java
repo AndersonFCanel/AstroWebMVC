@@ -37,14 +37,12 @@ public class AstroController extends HttpServlet {
 			request.setAttribute("signo", pessoa.converte(idade));
 			if (verHoroscopo.equals("sim")) {
 				verHoro = true;
-				System.out.println("Visualizar ");
 			} else {
 				verHoro = false;
 			}
 
 		} catch (Exception e) {
 			verHoro = false;
-			System.out.println("Não Visualizar ");
 			e.printStackTrace();
 		}
 

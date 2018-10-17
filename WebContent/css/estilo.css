@@ -6,7 +6,8 @@ div.corpo-Astro-home {
 	background-color: #8B0000;
 	color: #DAA520;
 	font-size: x-large;
-	font-family: sans-serif; background-image : url("../imagens/fundo.png");
+	font-family: sans-serif;
+	background-image: url("../imagens/fundo.png");
 	background-repeat: no-repeat;
 	background-position: 50%, 70%;
 	background-size: 25%;
@@ -38,6 +39,7 @@ div.AstroForm {
 	border-color: #DAA520;
 	font-size: large;
 	font-weight: bold;
+	text-indent: 5%;
 }
 
 table.table {
@@ -71,4 +73,20 @@ label.error {
 img.signo {
 	width: 100%;
 	height: 70%;
+}
+
+#nome {
+	margin-top: 0%;
+	margin-bottom: 0%;
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%
+}
+
+#idade {
+	margin-top: 0%;
+	margin-bottom: 0%;
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%
 }

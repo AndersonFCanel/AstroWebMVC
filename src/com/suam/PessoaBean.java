@@ -61,7 +61,6 @@ public class PessoaBean {
 		int ano = cal.get(Calendar.YEAR);
 
 		int anoNascimento = ano - idade;
-		System.out.println("Ano de nascimento: " + anoNascimento);
 
 		String linkSigno = "";
 
