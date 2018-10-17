@@ -6,10 +6,14 @@ div.corpo-Astro-home {
 	background-color: #8B0000;
 	color: #DAA520;
 	font-size: x-large;
-	background-image: url("../imagens/fundo.png");
+	font-family: sans-serif; background-image : url("../imagens/fundo.png");
 	background-repeat: no-repeat;
 	background-position: 50%, 70%;
 	background-size: 25%;
+	align-content: center;
+	align-items: center;
+	align-self: center;
+	background-image: url("../imagens/fundo.png");
 }
 
 div.corpo-Astro {
@@ -40,6 +44,10 @@ table.table {
 	border-width: 10px;
 	border-style: double;
 	border-color: #DAA520;
+	width: 100%;
+	align-content: center;
+	align-items: center;
+	align-self: center;
 }
 
 label {
@@ -47,15 +55,20 @@ label {
 }
 
 input.error {
-	border: 2px solid red;
+	border: 2px solid blue;
 }
 
 label.error {
 	font-weight: bold;
-	color: scrollbar;
+	color: blue;
+	text-decoration: blink;
 }
 
-button {
-	display: block;
-	margin-top: 20px;
+#voltar {
+	margin-top: 165%;
+}
+
+img.signo {
+	width: 100%;
+	height: 70%;
 }

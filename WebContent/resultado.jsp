@@ -42,71 +42,77 @@
 <title>AstroWeb</title>
 </head>
 <body>
-<div class="container-fluid">
-	<div class="corpo-Astro">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h1>Astro Web</h1>
+	<div class="container-fluid">
+		<div class="corpo-Astro">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h1>Astro Web</h1>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">Nome</th>
+								<th scope="col">Idade</th>
+								<th scope="col">Meses</th>
+								<th scope="col">Dias</th>
+								<th scope="col">Minutos</th>
+								<th scope="col">Segundos</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><%=request.getAttribute("nome")%></td>
+								<td><%=request.getAttribute("idade")%></td>
+								<td><%=request.getAttribute("meses")%></td>
+								<td><%=request.getAttribute("dias")%></td>
+								<td><%=request.getAttribute("minutos")%></td>
+								<td><%=request.getAttribute("segundos")%></td>
+							</tr>
+						</tbody>	
+					</table>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-5">
+					<%
+						String ver = (String) request.getAttribute("verSigno");
+						if (ver.equals("true")) {
+							out.print("<table class='table'>");
+							out.print("<thead>");
+							out.print("<tr>");
+							out.print("<th scope='col'>Signo Chinês</th>");
+							out.print("</tr>");
+							out.print("</thead>");
+							out.print("<tbody>");
+							out.print("<tr>");
+							out.print("<td>");
+							out.print("<img class='signo' src='" + request.getAttribute("signo")
+									+ "' alt='Imagem de página não encontrada'/>");
+							out.print("</td>");
+							out.print("</tr>");
+							out.print("</tbody>");
+							out.print("</table>");
+						}
+					%>
+				</div>
+				<div class="col-md-3"></div>
+				<div class="col-md-2">
+					<form id="form" data-toggle="validator" role="form" method="post"
+						action="AstroController">
+						<button type="submit" class="btn btn-warning btn-lg" id="voltar"
+							name="voltar">Voltar</button>
+					</form>
+				</div>
 			</div>
 		</div>
-
-		<div class="row">
-			<div class="col-md-1"></div>
-			<div class="col-md-10">
-				<table class="table">
-					<thead>
-						<tr>
-							<th scope="col">Nome</th>
-							<th scope="col">Idade</th>
-							<th scope="col">Meses</th>
-							<th scope="col">Dias</th>
-							<th scope="col">Minutos</th>
-							<th scope="col">Segundos</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><%=request.getAttribute("nome")%></td>
-							<td><%=request.getAttribute("idade")%></td>
-							<td><%=request.getAttribute("meses")%></td>
-							<td><%=request.getAttribute("dias")%></td>
-							<td><%=request.getAttribute("minutos")%></td>
-							<td><%=request.getAttribute("segundos")%></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="col-md-1"></div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-1"></div>
-			<div class="col-md-5">
-
-				<%
-					String ver = (String) request.getAttribute("verSigno");
-
-					if (ver.equals("true")) {
-						out.print(
-								"<table class='table'>\n<thead>\n<tr>\n<th scope='col'>Signo</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>");
-						out.print("<img src='" + request.getAttribute("signo")
-								+ "' alt='Imagem de página não encontrada' width='100%' height='70%' />");
-						out.print("</td>\n</tr>\n</tbody>\n</table>");
-					}
-				%>
-			</div>
-			<div class="col-md-6"></div>
-		</div>
-		<div class="row">
-			<div class="col-md-11"></div>
-			<div class="col-md-1">
-				<form id="form" data-toggle="validator" role="form" method="post"
-					action="AstroController">
-					<button type="submit" class="btn btn-warning btn-lg">Voltar</button>
-				</form>
-			</div>
-		</div>
-	</div>
 	</div>
 </body>
 </html>

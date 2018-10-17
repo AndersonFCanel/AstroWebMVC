@@ -16,10 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 public class AstroController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public AstroController() {
-		super();
-	}
-
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -60,11 +56,7 @@ public class AstroController extends HttpServlet {
 		request.setAttribute("minutos", pessoa.calculaMinutos());
 		request.setAttribute("segundos", pessoa.calculaSegundos());
 		request.setAttribute("verSigno", Boolean.toString(verHoro));
-
-		System.out.println(pessoa.nome + "\nDias - " + pessoa.calculaDias() + "\nMeses - " + "" + pessoa.calculaMeses()
-				+ "\nAnos - " + pessoa.calculaAnos() + "\n Minutos - " + "" + pessoa.calculaMinutos() + " Segundos - "
-				+ pessoa.calculaSegundos());
-
+		
 		request.getRequestDispatcher("resultado.jsp").forward(request, response);
 
 	}
