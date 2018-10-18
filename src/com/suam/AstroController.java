@@ -27,14 +27,15 @@ public class AstroController extends HttpServlet {
 		int idade = Integer.parseInt(idad);
 
 		PessoaBean pessoa = new PessoaBean();
-
+		AstroService as = new AstroService();
+		
 		pessoa.setNome(nome);
 		pessoa.setIdade(idade);
 
 		boolean verHoro;
 		try {
 			verHoroscopo = request.getParameter("verHoroscopo");
-			request.setAttribute("signo", pessoa.converte(idade));
+			request.setAttribute("signo", as.converte(idade));
 			if (verHoroscopo.equals("sim")) {
 				verHoro = true;
 			} else {
@@ -48,11 +49,11 @@ public class AstroController extends HttpServlet {
 
 		request.setAttribute("nome", pessoa.getNome());
 		request.setAttribute("idade", pessoa.getIdade());
-		request.setAttribute("dias", pessoa.calculaDias());
-		request.setAttribute("meses", pessoa.calculaMeses());
-		request.setAttribute("anos", pessoa.calculaAnos());
-		request.setAttribute("minutos", pessoa.calculaMinutos());
-		request.setAttribute("segundos", pessoa.calculaSegundos());
+		request.setAttribute("dias", as.calculaDias());
+		request.setAttribute("meses", as.calculaMeses());
+		request.setAttribute("anos", as.calculaAnos());
+		request.setAttribute("minutos", as.calculaMinutos());
+		request.setAttribute("segundos", as.calculaSegundos());
 		request.setAttribute("verSigno", Boolean.toString(verHoro));
 		
 		request.getRequestDispatcher("resultado.jsp").forward(request, response);
