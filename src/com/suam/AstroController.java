@@ -56,12 +56,17 @@ public class AstroController extends HttpServlet {
 		request.setAttribute("verSigno", Boolean.toString(verHoro));
 		
 		request.getRequestDispatcher("resultado.jsp").forward(request, response);
+		
+		//redirecionando pelo navegador
+        response.sendRedirect("resultado.jsp");
 
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("astro.html").forward(request, response);
+		//request.getRequestDispatcher("astro.html").forward(request, response);
+		//redirecionando pelo navegador
+        response.sendRedirect("astro.html");
 	}
 
 }

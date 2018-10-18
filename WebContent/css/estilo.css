@@ -67,12 +67,16 @@ label.error {
 }
 
 #voltar {
-	margin-top: 165%;
+	
+	width: 100%;
+	height: 100%;
+	margin-bottom:0%;
 }
 
 img.signo {
-	width: 100%;
+	width: 70%;
 	height: 70%;
+	border: dashed;
 }
 
 #nome {
@@ -90,3 +94,8 @@ img.signo {
 	margin-right: 5%;
 	width: 90%
 }
+
+#enviar {
+	margin-top: 2%;
+}
+
