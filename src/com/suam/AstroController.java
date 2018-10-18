@@ -27,7 +27,7 @@ public class AstroController extends HttpServlet {
 		int idade = Integer.parseInt(idad);
 
 		PessoaBean pessoa = new PessoaBean();
-		AstroService as = new AstroService();
+		AstroService as = new AstroService(pessoa);
 		
 		pessoa.setNome(nome);
 		pessoa.setIdade(idade);
