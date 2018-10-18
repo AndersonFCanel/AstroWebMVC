@@ -58,7 +58,7 @@ public class AstroController extends HttpServlet {
 		request.getRequestDispatcher("resultado.jsp").forward(request, response);
 		
 		//redirecionando pelo navegador
-        response.sendRedirect("resultado.jsp");
+        //response.sendRedirect("resultado.jsp");
 
 	}
 
